@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumya Chauhan - Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <style>
+
+        body {
+            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        header {
+            background: linear-gradient(135deg, #feb47b 0%, #ff7e5f 100%);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        header:hover {
+            background: #ff7e5f;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffe4c4;
+        }
+
+        #hero {
+            background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #hero h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #fff;
+            color: #ff7e5f;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #ffe4c4;
+            color: #ff7e5f;
+        }
+
+        section.container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        section.container:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        pre {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 5px;
+        }
+
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .skills-list li:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form input[type="submit"] {
+            background-color: #fff;
+            color: #ff7e5f;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #ffe4c4;
+            color: #ff7e5f;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #ffe4c4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        
+        .skills-list li {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .skills-list li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Soumya Chauhan</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Discover my projects and skills</p>
+            <a href="#projects" class="btn">View Projects</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <pre>Ambitious Data Science student at SDBI, focusing on Business Intelligence and Advanced Analytics.
+
+Enthusiastic about cloud computing, particularly AWS, and its potential to revolutionize data-driven decision making.
+                                    
+Seeks to apply theoretical knowledge to practical, industry-relevant projects.
+                                    
+Committed to staying at the forefront of data science advancements through continuous learning and professional development.
+                                    
+Eager to contribute innovative solutions to real-world challenges in a dynamic, forward-thinking organization.</pre>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project">
+                <a href="https://github.com/soumyachauhan/Football-EDA" target="_blank">
+                    <img src="images/Screenshot 2024-09-15 155911.png" alt="Project 1">
+                </a>
+                <h3>EDA of Football</h3>
+                <p>This EDA offers a comprehensive exploration of football analytics, leveraging Python libraries to analyze players, club games, and various other aspects of the sport. Through statistical analysis and visualization, we uncover insights into player performance, club strategies, and league dynamics providing valuable insights for football enthusiasts.</p>
+            </div>
+            <div class="project">
+                <a href="https://github.com/soumyachauhan/AmazonSales-PBI" target="_blank" rel="noopener noreferrer">
+                    <img src="images/1717077564138.jfif" alt="Project 2">
+                </a>
+                <h3>Amazon Sales PBI Dashboard</h3>
+                <p>This project showcases a Sales Dashboard developed using Microsoft Power BI, with the underlying data reflecting sales figures from Amazon.</p>
+            </div>
+            <div class="project">
+                <a href="https://github.com/soumyachauhan/vba-financial-accounting" target="_blank" rel="noopener noreferrer"><img src="images/Picture2.jpg" alt="Project 3"></a>
+                <h3>Financial Accounting Application using VBA</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>Python</li>
+            <li>R</li>
+            <li>VBA</li>
+            <li>Excel</li>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <form action="mailto:soumyachauhan05@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+    <!-- Social Links Section with Icons -->
+    <section class="social-links">
+        <h2>Follow Me</h2>
+        <a href="https://www.linkedin.com/in/soumyachauhandotcom/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/soumyachauhan" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://drive.google.com/file/d/1gIr_VzgqUc1V_u9ovJoe4-EdD9eMUbEV/view?usp=sharing" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Soumya Chauhan. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
